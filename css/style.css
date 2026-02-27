@@ -100,7 +100,7 @@ h1 {
 .input-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    margin-bottom: 5px; 
 
 
 }

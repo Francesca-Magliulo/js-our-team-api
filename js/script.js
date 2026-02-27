@@ -38,7 +38,7 @@ function creaCard(name, role, email, img) {
 
 }
 
-// salvo in una costante l'indirizzo dell'API
+// salvo in una costante l'indirizzo dell'API, da cui recuperare i membri del team
 const urlMembers = "https://boolean-teachers.github.io/mock/api/members/"
 
 //inizializzo nello scope globale una variabile vuota per l'array che mi verrà restituito dopo la chimata all'API, per poterlo utilizzare anche per il form
@@ -47,11 +47,9 @@ let teamMembers;
 axios.get(urlMembers).then(memb => {
 
     console.log(memb.data)
+    teamMembers = memb.data
 
-    memb.data.forEach((singleMember) => {
-        const member = singleMember
-
-        teamMembers = memb.data
+    teamMembers.forEach((member) => {
 
         creaCard(member.name, member.role, member.email, member.img)
     });
