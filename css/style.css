@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(226, 82, 106);
+    margin: 50px 0 15px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+}
+
+.description {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 0 calc((100% - 50px) / 3);
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    background-color: black;
+
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card h5 {
+    color: white;
+    font-size: 16px;
+}
+.card p {
+    font-size: 14px;
+}
+
+.card-role {
+    text-align: left;
+    color: white;
+}
+
+.card-email {
+    color: rgb(60, 155, 245);
+}
+
+.card-image {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.card-image img {
+    width: 100%;
+}
+
+.form-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+
+
+}
+
+.input-group label {
+    font-size: 16px;
+}
+
+.input-group input {
+    font-size: 16px;
+}
+
+.form-container h3 {
+    color: rgb(226, 82, 106);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.form-container input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.form-container button {
+    padding: 5px 40px 5px 40px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/*BONUS RESPONSIVE*/
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex: 0 0 calc((100% - 25px) / 2);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        flex-basis: 100%;
+    }
+}
